@@ -9,13 +9,32 @@ let card2Image = document.getElementById("card2Image");
 
 const hand1 = [
   { name: "Wizard", level: 1, img: "./images/wizard.jpg" },
-  { name: "Elf", level: 2, img: "./images/elf.jpg" },
-  { name: "Ogre", level: 3, img: "./images/ogre.jpg" }
+  { name: "Elven Archer", level: 2, img: "./images/elf.jpg" },
+  { name: "Elven Swordsman", level: 1, img: "" },
+  { name: "Elven Glaiveman", level: 1, img: "" },
+  { name: "Dwarven Halberd", level: 1, img: "" },
+  { name: "Dwarven Shieldbearer", level: 1, img: "" },
+  { name: "Dwarven Shortswordsman", level: 1, img: "" },
+  { name: "Gondorian Ranger", level: 1, img: "" },
+  { name: "Gondorian Warrior", level: 1, img: "" },
+  { name: "Gondorian Guards", level: 1, img: "" },
+  { name: "Rohirrim Axeman", level: 1, img: "" },
+  { name: "Rohirrim Bowman", level: 1, img: "" },
+  { name: "Rohirrim Spearman", level: 1, img: "" },
+  { name: "Hobbit Shortswordsman", level: 1, img: "" },
+  { name: "Hobbit Archer", level: 1, img: "" },
+  { name: "Ent", level: 3, img: "" }
 ];
 
 const hand2 = [
-  { name: "Goblin", level: 1, img: "./images/goblin.jpg" },
-  { name: "Witch", level: 2, img: "./images/witch.jpg" },
+  { name: "Goblin Archer", level: 1, img: "" },
+  { name: "Goblin Swordsman", level: 2, img: "" },
+  { name: "Uruk-Hai Crossbowman", level: 1, img: "" },
+  { name: "Corsair Mercenary", level: 1, img: "" },
+  { name: "Mumakil", level: 1, img: "" },
+  { name: "Attack Troll", level: 1, img: "" },
+  { name: "Cave Troll", level: 1, img: "" },
+  { name: "Drummer Troll", level: 1, img: "" },
   { name: "Dragon", level: 3, img: "./images/dragon.jpg" }
 ];
 
