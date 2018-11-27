@@ -7,7 +7,7 @@
     <title>Modified Card Game</title>
   </head>
   <body>
-    <button onclick="draw()" id="button">Draw!</button>
+    <button onclick="draw()" id="drawButton">Draw!</button>
     <p id="message"></p>
 
     <h1>Player 1</h1>
@@ -17,6 +17,7 @@
     <p id="card1MagicalAttack"></p>
     <p id="card1MagicalDefense"></p>
     <img id="card1Image" height="200" width="200" />
+    <button onclick="attack1()" id="attack1Button">Attack!</button>
 
     <h1>Player 2</h1>
     <p id="card2Name"></p>
@@ -25,6 +26,7 @@
     <p id="card2MagicalAttack"></p>
     <p id="card2MagicalDefense"></p>
     <img id="card2Image" height="200" width="200" />
+    <button onclick="attack2()" id="attack2Button">Attack!</button>
 
     <script src="app.js"></script>
   </body>
