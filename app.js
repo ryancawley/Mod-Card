@@ -2,10 +2,16 @@
 let button = document.getElementById("button");
 let message = document.getElementById("message");
 let card1Name = document.getElementById("card1Name");
-let card1Level = document.getElementById("card1Level");
+let card1PhysicalAttack = document.getElementById("card1PhysicalAttack");
+let card1PhysicalDefense = document.getElementById("card1PhysicalDefense");
+let card1MagicalAttack = document.getElementById("card1MagicalAttack");
+let card1MagicalDefense = document.getElementById("card1MagicalDefense");
 let card1Image = document.getElementById("card1Image");
 let card2Name = document.getElementById("card2Name");
-let card2Level = document.getElementById("card2Level");
+let card2PhysicalAttack = document.getElementById("card2PhysicalAttack");
+let card2PhysicalDefense = document.getElementById("card2PhysicalDefense");
+let card2MagicalAttack = document.getElementById("card2MagicalAttack");
+let card2MagicalDefense = document.getElementById("card2MagicalDefense");
 let card2Image = document.getElementById("card2Image");
 
 const goodCard = [
@@ -339,37 +345,37 @@ message.innerHTML = "Please draw, Player 1";
 function draw() {
   button.disabled = true;
   message.innerHTML = "Player 1 is drawing...";
-  let goodCard = Math.round(Math.random() * 2);
+  let card1 = Math.round(Math.random() * 2);
   setTimeout(function() {
-    card1Name.innerHTML = "Name: " + hand1[goodCard].name;
+    card1Name.innerHTML = "Name: " + goodCard[card1].name;
     card1PhysicalAttack.innerHTML =
-      "Physical Attack: " + hand1[goodCard].physicalAttack;
+      "Physical Attack: " + goodCard[card1].physicalAttack;
     card1PhysicalDefense.innerHTML =
-      "Physical Defense: " + hand1[goodCard].physicalDefense;
+      "Physical Defense: " + goodCard[card1].physicalDefense;
     card1MagicalAttack.innerHTML =
-      "Magical Attack: " + hand1[goodCard].magicalAttack;
+      "Magical Attack: " + goodCard[card1].magicalAttack;
     card1MagicalDefense.innerHTML =
-      "Magical Defense: " + hand1[goodCard].magicalDefense;
-    card1Image.src = hand1[goodCard].img;
+      "Magical Defense: " + goodCard[card1].magicalDefense;
+    card1Image.src = goodCard[card1].img;
     message.innerHTML = "Player 2 is drawing...";
     setTimeout(function() {
-      let badCard = Math.round(Math.random() * 2);
-      card2Name.innerHTML = "Name: " + hand2[badCard].name;
+      let card2 = Math.round(Math.random() * 2);
+      card2Name.innerHTML = "Name: " + badCard[card2].name;
       card2PhysicalAttack.innerHTML =
-        "Physical Attack: " + hand2[badCard].physicalAttack;
+        "Physical Attack: " + badCard[card2].physicalAttack;
       card2PhysicalDefense.innerHTML =
-        "Physical Defense: " + hand2[badCard].physicalDefense;
+        "Physical Defense: " + badCard[card2].physicalDefense;
       card2MagicalAttack.innerHTML =
-        "Magical Attack: " + hand2[badCard].magicalAttack;
+        "Magical Attack: " + badCard[card2].magicalAttack;
       card2MagicalDefense.innerHTML =
-        "Magical Defense: " + hand2[badCard].magicalDefense;
-      card2Image.src = hand2[badCard].img;
+        "Magical Defense: " + badCard[card2].magicalDefense;
+      card2Image.src = badCard[card2].img;
       setTimeout(function() {
-        if (hand1[goodCard].level > hand2[badCard].level) {
+        if (goodCard[card1].level > badCard[card2].level) {
           alert("Player 1 Wins!");
-        } else if (hand2[badCard].level > hand1[goodCard].level) {
+        } else if (badCard[card2].level > goodCard[card1].level) {
           alert("Player 2 Wins!");
-        } else if ((hand1[goodCard].level = hand2[badCard].level)) {
+        } else if ((goodCard[card1].level = badCard[card2].level)) {
           alert("It's a Tie!");
         }
 
