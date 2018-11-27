@@ -1,3 +1,4 @@
+// update variables to include attack and defense attributes
 let button = document.getElementById("button");
 let message = document.getElementById("message");
 let card1Name = document.getElementById("card1Name");
