@@ -1,30 +1,25 @@
-// update variables to include attack and defense attributes
-let drawButton = document.getElementById("drawButton");
-let message = document.getElementById("message");
-let card1Name = document.getElementById("card1Name");
-let card1PhysicalAttack = document.getElementById("card1PhysicalAttack");
-let card1PhysicalDefense = document.getElementById("card1PhysicalDefense");
-let card1MagicalAttack = document.getElementById("card1MagicalAttack");
-let card1MagicalDefense = document.getElementById("card1MagicalDefense");
-let card1Image = document.getElementById("card1Image");
-let card2Name = document.getElementById("card2Name");
-let card2PhysicalAttack = document.getElementById("card2PhysicalAttack");
-let card2PhysicalDefense = document.getElementById("card2PhysicalDefense");
-let card2MagicalAttack = document.getElementById("card2MagicalAttack");
-let card2MagicalDefense = document.getElementById("card2MagicalDefense");
-let card2Image = document.getElementById("card2Image");
-
 const goodCard = [
   {
     name: "Barding",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Barding.PNG"
   },
   {
     name: "Beorning",
+    healthPoints: 1,
+    physicalAttack: 1,
+    physicalDefense: 1,
+    magicalAttack: 1,
+    magicalDefense: 1,
+    img: "./images/Beorning.PNG"
+  },
+  {
+    name: "Dead Man of Dunharrow",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
@@ -33,14 +28,16 @@ const goodCard = [
   },
   {
     name: "Dunedain",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Dunedain.jpg"
   },
   {
     name: "Dwarf",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
@@ -49,342 +46,323 @@ const goodCard = [
   },
   {
     name: "Eagle",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/LoTR-Eagles.jpg"
   },
   {
     name: "Ent",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Ent.jpg"
   },
   {
     name: "Gondorian",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Gondorian.jpg"
   },
   {
     name: "Grey-Elf",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/MirkwoodElf.jpg"
   },
   {
     name: "High-Elf",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/High-Elves.PNG"
   },
   {
     name: "Hobbit",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Hobbit.PNG"
   },
   {
     name: "Huorn",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Huorn.jpeg"
   },
   {
     name: "Numenorean",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Numenorean.PNG"
   },
   {
     name: "Pukel Man",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/PukelMan.jpg"
   },
   {
     name: "Ranger",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Ranger.PNG"
   },
   {
     name: "Raven",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Raven.PNG"
   },
   {
     name: "Rohirrim",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Rohirrim.PNG"
   },
   {
     name: "Wizard",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Gandalf.jpg"
   }
 ];
 
 const badCard = [
   {
     name: "Attack Troll",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Attack_Troll.jpg"
   },
   {
     name: "Balrog",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Balrog.PNG"
   },
   {
     name: "Barrow-Wight",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/BarrowWight.PNG"
   },
   {
     name: "Black Numenorean",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Black-Numenoreans.jpg"
   },
   {
     name: "Cave Troll",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/CaveTroll.jpg"
   },
   {
     name: "Corsair",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Corsair.png"
   },
   {
     name: "Crebain",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
-  },
-  {
-    name: "Dead Man of Dunharrow",
-    physicalAttack: 1,
-    physicalDefense: 1,
-    magicalAttack: 1,
-    magicalDefense: 1,
-    img: ""
+    img: "./images/Crebain.jpg"
   },
   {
     name: "Dragon",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Dragon.PNG"
   },
   {
     name: "Drummer Troll",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/DrummerTroll.png"
   },
   {
     name: "Dunlending",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Dunlending.jpg"
   },
   {
     name: "Easterling",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Easterling.png"
   },
   {
     name: "Goblin",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Goblin.png"
   },
   {
     name: "Haradrim",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Haradrim.png"
   },
   {
     name: "Kraken",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Watcher.jpg"
   },
   {
     name: "Mumakil",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Mumakil.jpg"
   },
   {
     name: "Nazgul",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/nazgul.jpg"
   },
   {
     name: "Orc",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Orcs.PNG"
   },
   {
     name: "Spider",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Spider.PNG"
   },
   {
     name: "Uruk-Hai",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/UrukHai.PNG"
   },
   {
     name: "Warg",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Warg.jpg"
   },
   {
     name: "Warg-Rider",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/WargRider.PNG"
   },
   {
     name: "Winged Beast",
+    healthPoints: 1,
     physicalAttack: 1,
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/WingedBeast.PNG"
   }
 ];
-
-message.innerHTML = "Please draw, Player 1";
-
-function draw() {
-  drawButton.disabled = true;
-  message.innerHTML = "Player 1 is drawing...";
-  let card1 = Math.round(Math.random() * 2);
-  setTimeout(function() {
-    card1Name.innerHTML = "Name: " + goodCard[card1].name;
-    card1PhysicalAttack.innerHTML =
-      "Physical Attack: " + goodCard[card1].physicalAttack;
-    card1PhysicalDefense.innerHTML =
-      "Physical Defense: " + goodCard[card1].physicalDefense;
-    card1MagicalAttack.innerHTML =
-      "Magical Attack: " + goodCard[card1].magicalAttack;
-    card1MagicalDefense.innerHTML =
-      "Magical Defense: " + goodCard[card1].magicalDefense;
-    card1Image.src = goodCard[card1].img;
-    message.innerHTML = "Player 2 is drawing...";
-    setTimeout(function() {
-      let card2 = Math.round(Math.random() * 2);
-      card2Name.innerHTML = "Name: " + badCard[card2].name;
-      card2PhysicalAttack.innerHTML =
-        "Physical Attack: " + badCard[card2].physicalAttack;
-      card2PhysicalDefense.innerHTML =
-        "Physical Defense: " + badCard[card2].physicalDefense;
-      card2MagicalAttack.innerHTML =
-        "Magical Attack: " + badCard[card2].magicalAttack;
-      card2MagicalDefense.innerHTML =
-        "Magical Defense: " + badCard[card2].magicalDefense;
-      card2Image.src = badCard[card2].img;
-      attack1Button.disabled = false;
-      attack2Button.disabled = true;
-    }, 1000);
-  }, 1000);
-}
-
-function attack1() {
-  attack1Button.disabled = true;
-  attack2Button.disabled = false;
-}
-
-function attack2() {
-  attack2Button.disabled = true;
-  drawButton.disabled = false;
-}
 
 /*       setTimeout(function() {
         if (goodCard[card1].level > badCard[card2].level) {
@@ -395,6 +373,3 @@ function attack2() {
           alert("It's a Tie!");
         }, 1000)
         }; */
-
-// which buttons to disable and when
-// draw button disabled until end of attack round: drawButton.disabled = false;
