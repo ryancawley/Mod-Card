@@ -1,0 +1,24 @@
+div.goodGuys {
+  display: block;
+  width: 84%;
+  border: 5px white;
+  margin: 0%;
+  text-align: left;
+}
+
+div.badGuys {
+  display: block;
+  border: 5px white;
+  margin: 0%;
+  text-align: right;
+}
+
+#drawButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#message {
+  text-align: center;
+}

@@ -24,7 +24,7 @@ const goodCard = [
     physicalDefense: 1,
     magicalAttack: 1,
     magicalDefense: 1,
-    img: ""
+    img: "./images/Dwarves.jpg"
   },
   {
     name: "Dunedain",
